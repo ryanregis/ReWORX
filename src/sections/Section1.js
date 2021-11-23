@@ -5,6 +5,7 @@ function Section1() {
         <div>
             <div>
                 <h1>ReWORX</h1>
+                <p>Strategic Outsourcing, ReWORXed.</p>
             </div>
         </div>
     )
