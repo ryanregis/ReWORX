@@ -32,7 +32,7 @@ const Section4 = () => {
     return (
     <div className="section">
       <h1>Section 4</h1>
-        <Grid container align="center" >
+        <Grid container align="center" p={5} >
             <Grid item xs={12} md={6} order={{xs:2,md:1}}>
                 <Card sx={{ maxWidth: 400}} style={styles.cardMod}>
                     <CardActionArea>
