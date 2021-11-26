@@ -2,7 +2,7 @@ import React from 'react';
 
 function Section2b() {
     return (
-        <div>
+        <div className="section-2-children">
             
         </div>
     )

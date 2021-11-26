@@ -1,1 +1,32 @@
+.App {
+    width: 100vw;
+    min-height: 100vh;
 
+    background-color: #363636;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.section{
+    padding-top: 10vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.section-2{
+    width: 200vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+}
+
+.section-2-children{
+    padding-top: 10vh;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+}

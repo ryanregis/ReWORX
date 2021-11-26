@@ -1,4 +1,6 @@
 import './App.css';
+import { ThemeProvider } from '@mui/material/styles';
+
 
 import Header from './sections/components/Header';
 import Section1 from './sections/Section1';

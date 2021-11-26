@@ -2,7 +2,7 @@ import React from 'react';
 
 function Section1() {
     return (
-        <div>
+        <div className="section">
             <div>
                 <h1>ReWORX</h1>
                 <p>Strategic Outsourcing, ReWORXed.</p>
