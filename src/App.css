@@ -10,21 +10,21 @@
     align-items: center;
 }
 
-.section{
+.section {
     padding-top: 10vh;
     width: 100%;
-    min-height:100%;
+    height: 100%;
 }
 
-.section-2{
-    width: 200vw;
+.section-2 {
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: flex-start;
     overflow-x: scroll;
 }
 
-.section-2-children{
+.section-2-children {
     padding-top: 10vh;
     margin: 0;
     width: 50%;
