@@ -19,24 +19,30 @@ let customTheme = createTheme({
 customTheme = createTheme(customTheme, {
     typography: {
         fontSize: 16,
-        fontFamily: '"Montserrat", "Poppins", Roboto',
+       
         color: customTheme.palette.info.light,
         h1: {
+            fontFamily: '"Montserrat", "Poppins", Roboto',
             fontWeight: 800,
         },
         h2: {
+            fontFamily: '"Montserrat", "Poppins", Roboto',
             fontWeight: 800,
         },
         h3: {
+            fontFamily: '"Montserrat", "Poppins", Roboto',
             fontWeight: 800,
         },
         h4: {
+            fontFamily: '"Montserrat", "Poppins", Roboto',
             fontWeight: 800,
         },
         h5: {
+            fontFamily: '"Montserrat", "Poppins", Roboto',
             fontWeight: 800,
         },
         h6: {
+            fontFamily: '"Montserrat", "Poppins", Roboto',
             fontWeight: 800,
         },
         title: {
@@ -63,6 +69,11 @@ customTheme = createTheme(customTheme, {
             fontFamily: '"Poppins", Roboto',
             color: customTheme.palette.info.dark,
             fontSize: '1.5rem',
+        },
+        body3: {
+            fontFamily: '"Poppins", Roboto',
+            color: customTheme.palette.info.light,
+            fontSize: '0.75rem',
         }
     }
 });
