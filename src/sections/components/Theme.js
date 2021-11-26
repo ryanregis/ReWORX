@@ -73,7 +73,6 @@ customTheme = createTheme(customTheme, {
         body3: {
             fontFamily: '"Poppins", Roboto',
             color: customTheme.palette.info.light,
-            fontSize: '0.75rem',
         }
     }
 });
