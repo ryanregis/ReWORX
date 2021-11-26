@@ -8,14 +8,11 @@ let customTheme = createTheme({
         secondary: {
             main: '#9F0C7F',
         },
-        black: {
-            main: '#363636',
-            light: '#606462',
-        },
-        white: {
-            main: "#FFFEFF",
-            dark: "#EDF0EE",
-        },
+        info: {
+            dark: '#363636',
+            main: '#606462',
+            light: '#FFFEFF',
+        }
     },
 });
 
@@ -23,7 +20,7 @@ customTheme = createTheme(customTheme, {
     typography: {
         fontSize: 16,
         fontFamily: '"Montserrat", "Poppins", Roboto',
-        color: theme.palette.white.main,
+        color: customTheme.palette.info.light,
         h1: {
             fontWeight: 800,
         },
@@ -44,27 +41,27 @@ customTheme = createTheme(customTheme, {
         },
         title: {
             fontFamily: '"Montserrat", "Poppins", Roboto',
-            color: theme.palette.secondary.main,
+            color: customTheme.palette.secondary.main,
             fontSize: '4.5rem',
         },
         subtitle1: {
             fontFamily: '"Poppins", Roboto',
-            color: theme.palette.secondary.main,
+            color: customTheme.palette.secondary.main,
             fontSize: '3rem',
         },
         subtitle2: {
             fontFamily: '"Poppins", Roboto',
-            color: theme.palette.white.main,
+            color: customTheme.palette.info.light,
             fontSize: '2.25rem',
         },
         body1: {
             fontFamily: '"Poppins", Roboto',
-            color: theme.palette.white.main,
+            color: customTheme.palette.info.light,
             fontSize: '1.5rem',
         },
         body2: {
             fontFamily: '"Poppins", Roboto',
-            color: theme.palette.black.main,
+            color: customTheme.palette.info.dark,
             fontSize: '1.5rem',
         }
     }
