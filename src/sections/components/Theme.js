@@ -19,7 +19,6 @@ let customTheme = createTheme({
 customTheme = createTheme(customTheme, {
     typography: {
         fontSize: 16,
-       
         color: customTheme.palette.info.light,
         h1: {
             fontFamily: '"Montserrat", "Poppins", Roboto',
