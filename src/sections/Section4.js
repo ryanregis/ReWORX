@@ -12,12 +12,8 @@ cardMod: {
   boxShadow: '5px 5px 5px 5px black',
   marginBottom: '30px',
 },
-body: {
-  padding: '0 20px 20px 20px',
-},
 media: {
   height: "200",
-  
 },
 overlay: {
   position: 'absolute',
@@ -34,7 +30,7 @@ overlay: {
 
 const Section4 = () => {
     return (
-    <div style={styles.body} className="section">
+    <div className="section">
       <h1>Section 4</h1>
         <Grid container align="center" >
             <Grid item xs={12} md={6} order={{xs:2,md:1}}>

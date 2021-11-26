@@ -13,7 +13,7 @@
 .section{
     padding-top: 10vh;
     width: 100%;
-    height: 100vh;
+    min-height:100%;
 }
 
 .section-2{
