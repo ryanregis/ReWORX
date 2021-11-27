@@ -40,7 +40,7 @@ const Section4 = () => {
                 <Card sx={{ maxWidth: 400}} style={styles.cardMod}>
                     <CardActionArea>
                       <Box sx={{ position: 'relative' }}>
-                          <CardMedia component="img" height='230' image={require('./images/section4-virtualassistance.jpeg').default} styles={styles.media}/>
+                          <CardMedia component="img" height='230' image={require('./images/section4-virtualassistance.jpeg').default} styles={styles.media} alt="virtualassistance"/>
                         <Box sx={styles.overlay}>
                           <Typography variant="h4">Virtual Assistance</Typography>
                           <Typography variant="body3">Need some remote help?<br/> ReWORX has virtual assistants ready to do your tasks.</Typography>
@@ -53,7 +53,7 @@ const Section4 = () => {
                 <Card sx={{ maxWidth: 400 }} style={styles.cardMod}>
                 <CardActionArea>
                   <Box sx={{ position: 'relative' }}>
-                    <CardMedia component="img" height='230' image={require('./images/section4-dataprocessing.jpeg').default} styles={styles.media}/>
+                    <CardMedia component="img" height='230' image={require('./images/section4-dataprocessing.jpeg').default} styles={styles.media} alt="dataprocessing"/>
                       <Box sx={styles.overlay}>
                         <Typography variant="h4">Data Processing</Typography>
                         <Typography variant="body3">Have some unrganized data entries or transcription <br/> projects?  Let ReWORX handle it.</Typography>
@@ -69,7 +69,7 @@ const Section4 = () => {
                 <Card sx={{ maxWidth: 400 }} style={styles.cardMod}>
                 <CardActionArea>
                   <Box sx={{ position: 'relative' }}>
-                    <CardMedia component="img" height='230' image={require('./images/section4-crypto.jpeg').default} styles={styles.media}/>
+                    <CardMedia component="img" height='230' image={require('./images/section4-crypto.jpeg').default} styles={styles.media} alt="crpto"/>
                       <Box sx={styles.overlay}>
                         <Typography variant="h4">Cryptocurrency</Typography>
                         <Typography variant="body3">Want advice regarding current crypto trends? <br/> ReWORX's co-founder Ralph Santolorin has a series of webinars just for you.</Typography>
@@ -82,7 +82,7 @@ const Section4 = () => {
                 <Card sx={{ maxWidth: 400 }} style={styles.cardMod}>
                 <CardActionArea>
                   <Box sx={{ position: 'relative' }}>
-                    <CardMedia component="img" height='230' image={require('./images/section4-webdev.jpeg').default} styles={styles.media}/>
+                    <CardMedia component="img" height='230' image={require('./images/section4-webdev.jpeg').default} styles={styles.media} alt="webdev"/>
                       <Box sx={styles.overlay}>
                         <Typography variant="h4">Web Development</Typography>
                         <Typography variant="body3">Got a website idea that need realization? <br/> ReWORX can do it for you.</Typography>
