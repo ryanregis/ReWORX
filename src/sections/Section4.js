@@ -33,6 +33,8 @@ overlay: {
 const Section4 = () => {
     return (
     <div id="Services" className="section section-4">
+    <ThemeProvider theme={customTheme}>
+
       <h1>Section 4</h1>
         <Grid container align="center" p={5} >
             <Grid item xs={12} md={6} order={{xs:2,md:1}}>
