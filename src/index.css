@@ -2,9 +2,39 @@
   box-sizing: border-box;
 }
 
-html, body{
+html{
+  scrollbar-gutter: stable;
+}
+
+html,body{
+  scroll-snap-type: y mandatory;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #363636;
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 2px ridge #606462;
+  background: linear-gradient(to bottom, #9FDC7F 50%, #178260 100%);
+}
+.section-2::-webkit-scrollbar-thumb {
+  border: 2px ridge #FFFEFF;
+  background: #178260;
+}
+/* html, body{
   scroll-behavior: smooth;
   
+} */
+
+.MuiToolbar-root{
+  min-height: 10vh !important;
+  padding: 0 7.5vw !important;
 }
 
 body {
@@ -21,3 +51,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
