@@ -2,7 +2,7 @@ import React from 'react';
 
 function Section6() {
     return (
-        <div className="section">
+        <div id="ContactUs" className="section section-6">
             
         </div>
     )
