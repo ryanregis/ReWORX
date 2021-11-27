@@ -6,7 +6,7 @@ let customTheme = createTheme({
             main: '#178260',
         },
         secondary: {
-            main: '#9F0C7F',
+            main: '#9FDC7F',
         },
         info: {
             dark: '#363636',
@@ -46,33 +46,44 @@ customTheme = createTheme(customTheme, {
         },
         title: {
             fontFamily: '"Montserrat", "Poppins", Roboto',
+            fontWeight: 800,
             color: customTheme.palette.secondary.main,
             fontSize: '4.5rem',
         },
         subtitle1: {
             fontFamily: '"Poppins", Roboto',
+            fontWeight: 600,
             color: customTheme.palette.secondary.main,
             fontSize: '3rem',
         },
         subtitle2: {
             fontFamily: '"Poppins", Roboto',
+            fontWeight: 600,
             color: customTheme.palette.info.light,
             fontSize: '2.25rem',
         },
         body1: {
             fontFamily: '"Poppins", Roboto',
+            fontWeight: 600,
             color: customTheme.palette.info.light,
             fontSize: '1.5rem',
         },
         body2: {
             fontFamily: '"Poppins", Roboto',
+            fontWeight: 600,
             color: customTheme.palette.info.dark,
             fontSize: '1.5rem',
         },
         body3: {
             fontFamily: '"Poppins", Roboto',
+            fontWeight: 600,
             color: customTheme.palette.info.light,
-        }
+        },
+        link:{
+            fontFamily: '"Poppins", Roboto',
+            fontWeight: 600,
+            margin: '0 0.75rem'
+        },
     }
 });
 
