@@ -5,6 +5,8 @@ import { Box} from '@mui/system';
 import { Typography } from '@mui/material';
 import { Grid } from '@mui/material';
 import { CardActionArea } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import customTheme from './components/Theme';
 //lightgreen background, two divs, two layered
 const styles = {
 cardMod: {
@@ -31,6 +33,7 @@ overlay: {
 const Section4 = () => {
     return (
     <div className="section">
+    <ThemeProvider theme={customTheme}>
       <h1>Section 4</h1>
         <Grid container align="center" p={5} >
             <Grid item xs={12} md={6} order={{xs:2,md:1}}>
@@ -39,8 +42,8 @@ const Section4 = () => {
                       <Box sx={{ position: 'relative' }}>
                           <CardMedia component="img" height='230' image={require('./images/section4-virtualassistance.jpeg').default} styles={styles.media}/>
                         <Box sx={styles.overlay}>
-                          <Typography variant="h5">Virtual Assistance</Typography>
-                          <Typography variant="body2">Need some remote help?<br/> ReWORX has virtual assistants ready to do your tasks.</Typography>
+                          <Typography variant="h4">Virtual Assistance</Typography>
+                          <Typography variant="body3">Need some remote help?<br/> ReWORX has virtual assistants ready to do your tasks.</Typography>
                         </Box>
                       </Box>
                     </CardActionArea>
@@ -52,8 +55,8 @@ const Section4 = () => {
                   <Box sx={{ position: 'relative' }}>
                     <CardMedia component="img" height='230' image={require('./images/section4-dataprocessing.jpeg').default} styles={styles.media}/>
                       <Box sx={styles.overlay}>
-                        <Typography variant="h5">Data Processing</Typography>
-                        <Typography variant="body2">Have some unrganized data entries or transcription <br/> projects?  Let ReWORX handle it.</Typography>
+                        <Typography variant="h4">Data Processing</Typography>
+                        <Typography variant="body3">Have some unrganized data entries or transcription <br/> projects?  Let ReWORX handle it.</Typography>
                       </Box>
                   </Box>
                 </CardActionArea>
@@ -68,8 +71,8 @@ const Section4 = () => {
                   <Box sx={{ position: 'relative' }}>
                     <CardMedia component="img" height='230' image={require('./images/section4-crypto.jpeg').default} styles={styles.media}/>
                       <Box sx={styles.overlay}>
-                        <Typography variant="h5">Cryptocurrency</Typography>
-                        <Typography variant="body2">Want advice regarding current crypto trends? <br/> ReWORX's co-founder Ralph Santolorin has a series of webinars just for you.</Typography>
+                        <Typography variant="h4">Cryptocurrency</Typography>
+                        <Typography variant="body3">Want advice regarding current crypto trends? <br/> ReWORX's co-founder Ralph Santolorin has a series of webinars just for you.</Typography>
                       </Box>
                   </Box>
                 </CardActionArea>
@@ -81,16 +84,15 @@ const Section4 = () => {
                   <Box sx={{ position: 'relative' }}>
                     <CardMedia component="img" height='230' image={require('./images/section4-webdev.jpeg').default} styles={styles.media}/>
                       <Box sx={styles.overlay}>
-                        <Typography variant="h5">Web Development</Typography>
-                        <Typography variant="body2">Got a website idea that need realization? <br/> ReWORX can do it for you.</Typography>
+                        <Typography variant="h4">Web Development</Typography>
+                        <Typography variant="body3">Got a website idea that need realization? <br/> ReWORX can do it for you.</Typography>
                       </Box>
                   </Box>
                 </CardActionArea>
                 </Card>
             </Grid>
         </Grid>
-    
- 
+      </ThemeProvider>
     </div>
     )
 }
