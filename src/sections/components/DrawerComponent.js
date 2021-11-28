@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
-import { Divider, Drawer, IconButton, List, ListItem, ListItemText, Link } from "@mui/material";
+import { Divider, SwipeableDrawer, IconButton, List, ListItem, ListItemText, ListItemIcon, Link } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import MenuIcon from "@mui/icons-material/Menu";
+import HomeIcon from '@mui/icons-material/Home';
+import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
+import InfoIcon from '@mui/icons-material/Info';
+import EmailIcon from '@mui/icons-material/Email';
 
 const useStyles = makeStyles(() => ({
     link: {
@@ -17,47 +21,32 @@ const useStyles = makeStyles(() => ({
 function DrawerComponent() {
     const classes = useStyles();
     const [openDrawer, setOpenDrawer] = useState(false);
-    // <ListItem onClick={() => setOpenDrawer(false)}>
-    //                     <ListItemText>
-    //                         <Link to="/" className={classes.link}>Home</Link>
-    //                     </ListItemText>
-    //                 </ListItem>
-    //                 <Divider />
-    //                 <ListItem onClick={() => setOpenDrawer(false)}>
-    //                     <ListItemText>
-    //                         <Link to="/Portfolio" className={classes.link}>Portfolio</Link>
-    //                     </ListItemText>
-    //                 </ListItem>
-    //                 <Divider />
-    //                 <ListItem onClick={() => setOpenDrawer(false)}>
-    //                     <ListItemText>
-    //                         <Link to="/About" className={classes.link}>About</Link>
-    //                     </ListItemText>
-    //                 </ListItem>
-    //                 <Divider />
-    //                 <ListItem onClick={() => setOpenDrawer(false)}>
-    //                     <ListItemText>
-    //                         <Link to="/ContactUs" className={classes.link}>Contact Us</Link>
-    //                     </ListItemText>
-    //                 </ListItem>
-    //                 <Divider />
-    //                 <ListItem onClick={() => setOpenDrawer(false)}>
-    //                     <ListItemText>
-    //                         <Link to="/FAQ" className={classes.link}>FAQ</Link>
-    //                     </ListItemText>
-    //                 </ListItem>
-    //                 <ListItem onClick={() => setOpenDrawer(false)}>
-    //                     <ListItemText>
-    //                         <Link to="/Example" className={classes.link}>Example</Link>
-    //                     </ListItemText>
-    //                 </ListItem>
+    const linkArray = [
+        { text: 'Home', className: 'link', href: '#Home', ref: React.createRef(), icon: <HomeIcon color="secondary" /> },
+        { text: 'Services', className: 'link', href: '#Services', ref: React.createRef(),icon: <MiscellaneousServicesIcon color="secondary" /> },
+        { text: 'About Us', className: 'link', href: '#AboutUs', ref: React.createRef(), icon: <InfoIcon color="secondary" /> },
+        { text: 'Contact Us', className: 'link', href: '#ContactUs', ref: React.createRef(), icon: <EmailIcon color="secondary" /> }
+    ];
     return (
         <>
-            <Drawer anchor='right' open={openDrawer} onClose={() => setOpenDrawer(false)}>
+            <SwipeableDrawer anchor='right' open={openDrawer} onClose={() => setOpenDrawer(false)}>
                 <List>
-
+                    {linkArray.map(function (link){
+                       return (
+                           <>
+                            <ListItem onClick={() => setOpenDrawer(false)}>
+                                <ListItemIcon>
+                                    {link.icon}
+                                </ListItemIcon>
+                                <ListItemText>
+                                    <Link variant="link" className={link.className} color="info.light" href={link.href} ref={link.ref} underline="none">{link.text}</Link>
+                                </ListItemText>
+                            </ListItem>
+                            <Divider color="#606462"/>
+                            </>
+                    )})}
                 </List>
-            </Drawer>
+            </SwipeableDrawer>
             <IconButton className={classes.icon} onClick={() => setOpenDrawer(!openDrawer)}>
                 <MenuIcon />
             </IconButton>

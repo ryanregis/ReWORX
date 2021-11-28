@@ -37,6 +37,10 @@ body::-webkit-scrollbar-thumb {
   padding: 0 7.5vw !important;
 }
 
+.MuiPaper-root{
+  background-color: #363636;
+}
+
 body {
   padding:0;
   margin: 0;
