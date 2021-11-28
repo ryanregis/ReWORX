@@ -6,9 +6,9 @@ html{
   scrollbar-gutter: stable;
 }
 
-html,body{
-  scroll-snap-type: y mandatory;
-}
+/* html,body{
+  scroll-snap-type: y proximity;
+} */
 
 ::-webkit-scrollbar {
   width: 10px;

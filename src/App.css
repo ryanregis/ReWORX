@@ -1,5 +1,4 @@
 .App {
-    
     max-width: 100%;
     min-height: 100vh;
 
@@ -11,35 +10,68 @@
     align-items: center;
 }
 
-.header{
+.header {
     background-color: #363636;
     display: flex;
     justify-content: space-between;
 }
 
-.header-logo{
+.header-logo {
     width: 148px;
-    height:68px;
+    height: 68px;
 }
 
-.home{
-    scroll-snap-align: start;
+.link{
+    padding: 10px;
+}
+
+.link:hover {
+    border-radius: 20px;
+    background-color: #FFFEFF;
+    color: #178260;
+}
+.link:hover.active{
+    border-radius: 20px;
+    background-color: #9FDC7F !important;
+    color: #363636 !important;
+}
+
+.contactLink{
+    border-radius: 20px;
+    background-color: #178260;
+    padding: 10px;
+}
+.contactLink:hover{
+    border-radius: 20px;
+    background-color: #FFFEFF;
+    color: #178260;
+    padding: 10px;
+}
+.contactLink.active{
+    border-radius: 20px;
+    background-color: #FFFEFF;
+    border: 2px solid #178260;
+    color: #363636;
+}
+
+.home {
+    /* scroll-snap-align: start; */
     width: 100%;
 }
 
 .section {
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
     /* border: 2px solid white; */
     width: 100%;
     padding-top: 10vh;
     min-height: 100vh;
 }
 
-.section-1{
+.section-1 {
     /* border: 2px solid white; */
     width: 100%;
-    min-height: 90vh;
-    margin-top: 10vh;
+    min-height: 100vh;
+    padding-top: 10vh;
     background: url(./sections/images/section1-bgimg.jpg);
     background-size: cover;
     background-position: center;
@@ -47,7 +79,7 @@
 
 .section-2 {
     scroll-snap-align: start;
-    max-width:100vw;
+    max-width: 100vw;
     min-height: 100vh;
     display: flex;
     justify-content: flex-start;
@@ -61,28 +93,29 @@
     min-height: 100%;
 }
 
-.section-2a{
+.section-2a {
     background-color: #606462;
 }
 
-.section-2b, .section-4{
+.section-2b,
+.section-4 {
     background-color: #9FDC7F;
 }
 
-.section-3{
+.section-3 {
     background: url(./sections/images/section3-bgimg.png);
     background-size: cover;
     background-position: center;
 }
 
-.section-5{
+.section-5 {
     background: radial-gradient(78.03% 83.84% at 50% 50%, #FFFEFF 0%, #9BD97E 100%);
 }
 
-.section-6{
+.section-6 {
     background: #FFFEFF;
 }
 
-.active{
+.active {
     color: #9FDC7F !important;
 }
