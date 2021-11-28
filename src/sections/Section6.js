@@ -85,7 +85,7 @@ function Section6() {
                 <Grid container spacing={2} align="center"  style ={styles.body} >
                     <Grid item xs={12} md={6} >
                         <div  style ={styles.formstyles} ><br/>
-                        <Typography color="info.light" variant="h3">Contact Us</Typography>
+                        <Typography color="info.light" style={{textShadow: '0px 0px 10px #363636, 0px 0px 10px #363636, 0px 0px 10px #363636'}} variant="h3">Contact Us</Typography>
                             <form id="form" onSubmit={handleSubmit}> 
                                 
                                 <Box   sx={{display: 'grid',  gridTemplateColumns: { sm: '1fr 1fr' ,xs: '1fr'}}}>
@@ -139,9 +139,9 @@ function Section6() {
                     <Grid item xs={12} md={6} >
                         
                         <div  style ={styles.reachstyles} >
-                            <Typography color="primary"   variant="h3">Reach Us</Typography>
+                            <Typography color="primary"  style={{textShadow: '0px 0px 10px #9FDC7F, 0px 0px 10px #9FDC7F, 0px 0px 10px #9FDC7F'}} variant="h3">Reach Us</Typography>
                             <Typography variant="h6">Contact Number: <br/>+639-xxxx-xxxx</Typography>
-                            <Typography variant="h6">Email: <br/><Link href="#">contact@reworx.com</Link></Typography>
+                            <Typography variant="h6" >Email: <br/><Link href="#">contact@reworx.com</Link></Typography>
                             <Typography variant="h6">Visit our Office:</Typography>
                             {/* <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7722.346359775843!2d120.97001912239107!3d14.589205742170764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca3d1375e1fb%3A0x49ebfa658c0ba08!2sIntramuros%2C%20Manila%2C%201002%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1637990544085!5m2!1sen!2sph" width="100%" height="250px" style={{border:"0"}}  loading="lazy" title="maps"></iframe>
                                      */}

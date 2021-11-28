@@ -12,7 +12,8 @@ const styles = {
 cardMod: {
   borderRadius: '20px',
   boxShadow: '5px 5px 5px 5px black',
-  marginBottom: '30px',
+  marginBottom: '5%',
+  marginTop: '3%',
 },
 media: {
   height: "200",
@@ -34,9 +35,7 @@ const Section4 = () => {
     return (
     <div id="Services" className="section section-4">
     <ThemeProvider theme={customTheme}>
-
-      <h1>Section 4</h1>
-        <Grid container align="center" p={5} >
+        <Grid container align="center" p={2} >
             <Grid item xs={12} md={6} order={{xs:2,md:1}}>
                 <Card sx={{ maxWidth: 400}} style={styles.cardMod}>
                     <CardActionArea>
@@ -64,7 +63,7 @@ const Section4 = () => {
                 </Card>
             </Grid>
             <Grid item xs={12} md={12} order={{xs:1,md:3}}>
-                  <h1>Services</h1>
+                  <Typography  color="info.light" style={{textShadow: '0px 0px 10px #363636, 0px 0px 10px #363636, 0px 0px 10px #363636'}} variant="h3">Services</Typography>
             </Grid>
             <Grid item xs={12} md={6} order={{xs:4,md:4}}>
                 <Card sx={{ maxWidth: 400 }} style={styles.cardMod}>
