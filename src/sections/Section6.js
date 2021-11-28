@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import { Button } from '@mui/material';
-import { FormControl, Input, InputLabel,TextareaAutosize } from '@mui/material';
+import { FormControl, Input, InputLabel,TextareaAutosize, FormHelperText } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import customTheme from './components/Theme';
 import { Typography } from '@mui/material';
@@ -10,12 +10,11 @@ import { Typography } from '@mui/material';
 
 const styles = {
     body: {
-        padding: '2% 5%',
+        padding: '3% 5%',
         backgroundColor: 'white',
     },
     formstyles: {
         background: 'linear-gradient(90deg, #9FDC7F 50%, #178260 100%)',
-        padding: '5%, 2%',
         borderRadius: '20px',
 
     },
@@ -27,28 +26,59 @@ const styles = {
     inputstyles: {
         
         backgroundColor: 'white', 
-        width:'250px', 
+        width:'100%', 
         height:'30px', 
         borderRadius: '5px', 
-        padding: '20px',
+        padding: '7%',
         
     },  
     labelstyles: {
         color: 'black',  
         fontWeight:'600',
-        fontSize: '20px',
+        fontSize: '90%',
     },
     buttonstyles: {
-        fontSize: '20px',
+        fontSize: '100%',
         backgroundColor: 'lightgreen',
         color: 'black',
-        margin: '20px',
+        margin: '2%',
     },
 
 }
 
-//gap={3}
+
 function Section6() {
+    const fNameRef = useRef(null);
+    const lNameRef = useRef(null);
+    const emailRef = useRef(null);
+    const messageRef = useRef(null);
+    const cNameRef = useRef(null);
+    const [id, setID] = useState(Date.now);
+    const [allContacts, setallContacts] = useState([]);
+
+    const handleSubmit = (e) => {
+
+        e.preventDefault();
+        const formData = {
+           id: id,
+           fName: fNameRef.current.value,
+           lName: lNameRef.current.value,
+           email: emailRef.current.value,
+           message: messageRef.current.value,
+           cName: cNameRef.current.value,
+        };
+        //all data in object formData will be stored in allcontacts array spread
+        setallContacts([...allContacts, formData])
+        alert('Your Form Have Been Submitted');
+        fNameRef.current.value =null;
+        lNameRef.current.value=null;
+        emailRef.current.value=null;
+        messageRef.current.value=null;
+        setID(Date.now);
+     };
+     useEffect(()=>{localStorage.setItem("contact", JSON.stringify(allContacts))},[allContacts]);
+     
+
     return (
         <div id="ContactUs" className="section section-6">
             <ThemeProvider theme={customTheme}>
@@ -56,54 +86,57 @@ function Section6() {
                     <Grid item xs={12} md={6} >
                         <div  style ={styles.formstyles} ><br/>
                         <Typography variant="h3">Contact Us</Typography>
-                            <form > 
+                            <form id="form" onSubmit={handleSubmit}> 
                                 
                                 <Box   sx={{display: 'grid',  gridTemplateColumns: { sm: '1fr 1fr' ,xs: '1fr'}}}>
                                     <div>
-                                        <FormControl sx={{marginBottom:'20px'}}>
-                                            <InputLabel sx={styles.labelstyles}>First Name</InputLabel>
-                                            <Input  type="text" sx={styles.inputstyles} required/>
+                                        <FormControl sx={{margin:'4%'}}>
+                                            <InputLabel htmlFor="fName" sx={styles.labelstyles}>First Name</InputLabel>
+                                            <Input type="text" inputRef={fNameRef} id="fName" name="fName"  sx={styles.inputstyles} required/>
                                         </FormControl>
                                     </div>
                                     
                                     <div>
-                                        <FormControl sx={{marginBottom:'20px'}}>
-                                            <InputLabel sx={styles.labelstyles}>Last Name</InputLabel>
-                                            <Input  type="text" sx={styles.inputstyles} required/>
+                                        <FormControl sx={{margin:'4%'}}>
+                                            <InputLabel  htmlFor="lName" sx={styles.labelstyles}>Last Name</InputLabel>
+                                            <Input  inputRef={lNameRef} id="lName"  name="lName" type="text" sx={styles.inputstyles} required/>
                                         </FormControl>
                                     </div>
 
                                     <div>
-                                        <FormControl sx={{marginBottom:'20px'}}>
-                                            <InputLabel sx={styles.labelstyles}>Company Name</InputLabel>
-                                            <Input type="text" sx={styles.inputstyles} required/>
+                                        <FormControl sx={{margin:'4%'}}>
+                                            <InputLabel htmlFor="cName" sx={styles.labelstyles}>Company Name</InputLabel>
+                                            <Input inputRef={cNameRef}  name="cName" type="text" id="cName" sx={styles.inputstyles} />
+                                            <FormHelperText>*Optional Only</FormHelperText>
                                         </FormControl>
                                     </div>
 
                                     <div>
-                                        <FormControl sx={{marginBottom:'20px'}}>
-                                            <InputLabel sx={styles.labelstyles}>Email address</InputLabel>
-                                            <Input type="email" sx={styles.inputstyles} required/>
+                                        <FormControl sx={{margin:'4%'}}>
+                                            <InputLabel htmlFor="email" sx={styles.labelstyles}>Email address</InputLabel>
+                                            <Input inputRef={emailRef} id="email" name="email" type="email" sx={styles.inputstyles} required/>
                                         </FormControl>
                                     </div>
 
                                     <div>
-                                        <FormControl sx={{marginBottom:'20px'}}>
+                                        <FormControl sx={{margin:'4%'}}>
                                             <InputLabel sx={styles.labelstyles}>Phone Number</InputLabel>
                                             <Input type="number" sx={styles.inputstyles} required/>
+                                            <FormHelperText>Enter phone number in this format</FormHelperText>
                                         </FormControl>
                                     </div>
 
                                     <div>
-                                        <FormControl sx={{marginBottom:'20px'}}>
+                                        <FormControl sx={{margin:'4%'}}>
                                             <InputLabel sx={styles.labelstyles}>Zip Code</InputLabel>
                                             <Input type="number" sx={styles.inputstyles} required/>
+                                            <FormHelperText>Enter Zip number in this format</FormHelperText>
                                         </FormControl>
                                     </div>
                                 </Box>
                                     <div>
-                                        <FormControl sx={{marginBottom:'20px'}}>
-                                            <TextareaAutosize  style={{ fontSize: '20px'}} placeholder="Message Us" required/>
+                                        <FormControl sx={{margin:'4%'}}>
+                                            <TextareaAutosize  ref={messageRef} id="message"  name="message" style={{ fontSize: '1rem', width:'100%', height:'9vh'}} placeholder="Message Us" required/>
                                         </FormControl>
                                     </div>
 
