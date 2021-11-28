@@ -7,6 +7,7 @@ import useWindowDimensions from './WindowDimensions';
 import brandLogo from '../images/ReWORX-BrandLogo.png'
 
 
+
 function Header() {
     // eslint-disable-next-line
     let {height, width} = useWindowDimensions();
@@ -25,10 +26,10 @@ function Header() {
                         :
                         <Box>
                             <ScrollSpy offsetTop={h10}>
-                                <Link variant="link" color="info.light" href="#Home" ref={React.createRef()} underline="none">Home</Link>
-                                <Link variant="link" color="info.light" href="#Services" ref={React.createRef()} underline="none">Services</Link>
-                                <Link variant="link" color="info.light" href="#AboutUs" ref={React.createRef()} underline="none">About Us</Link>
-                                <Link variant="link" color="info.light" href="#ContactUs" ref={React.createRef()} underline="none">Contact Us</Link>
+                                <Link variant="link" className="link" color="info.light" href="#Home" ref={React.createRef()} underline="none">Home</Link>
+                                <Link variant="link" className="link" color="info.light" href="#Services" ref={React.createRef()} underline="none">Services</Link>
+                                <Link variant="link" className="link" color="info.light" href="#AboutUs" ref={React.createRef()} underline="none">About Us</Link>
+                                <Link variant="link" className="contactLink" color="info.light" href="#ContactUs" ref={React.createRef()} underline="none">Contact Us</Link>
                             </ScrollSpy>
                         </Box>
                     }
