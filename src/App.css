@@ -17,21 +17,20 @@
 }
 
 .header-logo {
-    width: 148px;
-    height: 68px;
+    width: clamp(100px, 10vw, 200px);
+    height: clamp(50px, 5vw, 100px);
 }
 
 .link{
+    border-radius: 20px;
     padding: 10px;
 }
 
 .link:hover {
-    border-radius: 20px;
     background-color: #FFFEFF;
     color: #178260;
 }
 .link:hover.active{
-    border-radius: 20px;
     background-color: #9FDC7F !important;
     color: #363636 !important;
 }
@@ -41,17 +40,25 @@
     background-color: #178260;
     padding: 10px;
 }
+
 .contactLink:hover{
     border-radius: 20px;
     background-color: #FFFEFF;
     color: #178260;
-    padding: 10px;
 }
-.contactLink.active{
+
+.contactLink:hover.active{
     border-radius: 20px;
     background-color: #FFFEFF;
     border: 2px solid #178260;
-    color: #363636;
+    color: #178260 !important;
+}
+
+.contactLink.active{
+    border-radius: 20px;
+    background-color: #178260;
+    border: 2px solid #9FDC7F;
+    color: #FFFEFF !important;
 }
 
 .home {
@@ -63,7 +70,7 @@
     /* scroll-snap-align: start; */
     /* border: 2px solid white; */
     width: 100%;
-    padding-top: 10vh;
+    padding: 10vh 0 10px 10px;
     min-height: 100vh;
 }
 
@@ -71,7 +78,7 @@
     /* border: 2px solid white; */
     width: 100%;
     min-height: 100vh;
-    padding-top: 10vh;
+    padding: 10vh 0 1.5vw 1.5vw;
     background: url(./sections/images/section1-bgimg.jpg);
     background-size: cover;
     background-position: center;
