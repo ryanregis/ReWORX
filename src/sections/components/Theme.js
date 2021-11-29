@@ -48,7 +48,7 @@ customTheme = createTheme(customTheme, {
             fontFamily: '"Montserrat", "Poppins", Roboto',
             fontWeight: 800,
             color: customTheme.palette.secondary.main,
-            fontSize: '4.5rem',
+            fontSize: 'clamp(1.5rem, 6vw,4.5rem)',
         },
         subtitle1: {
             fontFamily: '"Poppins", Roboto',
@@ -63,12 +63,14 @@ customTheme = createTheme(customTheme, {
             fontSize: '2.25rem',
         },
         body1: {
+            textAlign: 'center',
             fontFamily: '"Poppins", Roboto',
             fontWeight: 600,
             color: customTheme.palette.info.light,
             fontSize: '1.5rem',
         },
         body2: {
+            textAlign: 'center',
             fontFamily: '"Poppins", Roboto',
             fontWeight: 600,
             color: customTheme.palette.info.dark,
@@ -78,6 +80,22 @@ customTheme = createTheme(customTheme, {
             fontFamily: '"Poppins", Roboto',
             fontWeight: 600,
             color: customTheme.palette.info.light,
+        },
+        body4:{
+            margin: '0 5px',
+            textAlign: 'center',
+            fontFamily: '"Poppins", Roboto',
+            fontWeight: 600,
+            color: customTheme.palette.info.light,
+            fontSize: 'clamp(0.75rem, 3.2vw, 1.5rem)',
+        },
+        body5:{
+            margin: '0 5px',
+            textAlign: 'center',
+            fontFamily: '"Poppins", Roboto',
+            fontWeight: 600,
+            color: customTheme.palette.info.dark,
+            fontSize: 'clamp(0.75rem, 3.2vw, 1.5rem)',
         },
         link:{
             fontFamily: '"Poppins", Roboto',
