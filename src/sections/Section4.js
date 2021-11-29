@@ -37,7 +37,7 @@ const Section4 = () => {
     <ThemeProvider theme={customTheme}>
         <Grid container align="center" p={2} >
             <Grid item xs={12} md={6} order={{xs:2,md:1}}>
-                <Card sx={{ maxWidth: 340}} style={styles.cardMod}>
+                <Card sx={{width: 'clamp(300px, 30vw, 500px)'}} style={styles.cardMod}>
                     <CardActionArea>
                       <Box sx={{ position: 'relative' }}>
                           <CardMedia component="img" height='230' image={require('./images/section4-virtualassistance.jpeg').default} styles={styles.media} alt="virtualassistance"/>
