@@ -39,6 +39,7 @@
     border-radius: 20px;
     background-color: #178260;
     padding: 10px;
+    margin: 5px;
 }
 
 .contactLink:hover{
@@ -48,16 +49,18 @@
 }
 
 .contactLink:hover.active{
+    margin: 0 calc(0.75rem - 5px);
     border-radius: 20px;
     background-color: #FFFEFF;
-    border: 2px solid #178260;
+    border: 5px solid #178260;
     color: #178260 !important;
 }
 
 .contactLink.active{
+    margin: 0 calc(0.75rem - 5px);
     border-radius: 20px;
     background-color: #178260;
-    border: 2px solid #9FDC7F;
+    border: 5px solid #9FDC7F;
     color: #FFFEFF !important;
 }
 
@@ -85,9 +88,8 @@
 }
 
 .section-2 {
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
     max-width: 100vw;
-    min-height: 100vh;
     display: flex;
     justify-content: flex-start;
     overflow-x: scroll;
@@ -97,11 +99,11 @@
     padding-top: 10vh;
     margin: 0;
     min-width: 100vw;
-    min-height: 100%;
 }
 
 .section-2a {
     background-color: #606462;
+    min-height: 90vh;
 }
 
 .section-2b,

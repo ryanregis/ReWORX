@@ -48,7 +48,7 @@ customTheme = createTheme(customTheme, {
             fontFamily: '"Montserrat", "Poppins", Roboto',
             fontWeight: 800,
             color: customTheme.palette.secondary.main,
-            fontSize: '4.5rem',
+            fontSize: 'clamp(1.5rem, 6vw,4.5rem)',
         },
         subtitle1: {
             fontFamily: '"Poppins", Roboto',
@@ -63,10 +63,11 @@ customTheme = createTheme(customTheme, {
             fontSize: '2.25rem',
         },
         body1: {
+            textAlign: 'center',
             fontFamily: '"Poppins", Roboto',
             fontWeight: 600,
             color: customTheme.palette.info.light,
-            fontSize: '1.5rem',
+            fontSize: 'clamp(0.5rem, 5vw,1.5rem)',
         },
         body2: {
             fontFamily: '"Poppins", Roboto',

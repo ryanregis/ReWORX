@@ -34,7 +34,7 @@ const Section4 = () => {
       <h1>Section 4</h1>
         <Grid container align="center" >
             <Grid item xs={12} md={6} order={{xs:2,md:1}}>
-                <Card sx={{ maxWidth: 400}} style={styles.cardMod}>
+                <Card sx={{ maxWidth: 340}} style={styles.cardMod}>
                     <CardActionArea>
                       <Box sx={{ position: 'relative' }}>
                           <CardMedia component="img" height='230' image={require('./images/section4-virtualassistance.jpeg').default} styles={styles.media}/>
