@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box, Grid, Card, CardContent, CardMedia, Typography, ThemeProvider, Divider } from '@mui/material';
+import { Box, Grid, Card, CardContent, CardMedia, Typography, ThemeProvider, Divider, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import customTheme from './components/Theme';
-import { Card1img, Card2img, Card3img, Card4img } from './images/CardImg';
+import { Card1img, Card2img, Card3img, Card4img, ClientDecor } from './images/CardImg';
 const useStyles = makeStyles(() => ({
     root: {
         minHeight: '90vh',
@@ -13,7 +13,6 @@ const useStyles = makeStyles(() => ({
         alignItems: 'center',
     },
     clientContainer: {
-        border: '1px solid white',
         minHeight: '50vh',
         width: '90%',
         margin: '10px',
@@ -23,27 +22,27 @@ const useStyles = makeStyles(() => ({
         alignItems: 'center',
     },
     cardGrid: {
+        width: '100%',
+        minHeight: 100,
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-        alignItems: 'stretch',
+        flexDirection: 'row',
+        justifyContent: 'stretch',
+        alignItems: 'center',
         backgroundColor: `${customTheme.palette.info.light} !important`,
-    },
-    cardImg: {
-        height: '10vh',
-        backgroundPosition: 'center',
-        backgroundSize: 'contain',
+
+        '&:hover': {
+            boxShadow: `0 0 15px 5px ${customTheme.palette.secondary.main} !important`,
+        },
     },
     cardContent: {
-        flexGrow: 6,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         whiteSpace: 'pre-line',
     },
-    subtitle:{
-        textAlign:'right',
+    subtitle: {
+        textAlign: 'right',
     },
 }));
 
@@ -51,54 +50,82 @@ function Section2a() {
     const classes = useStyles();
 
     const cardContent = [
-        { img: Card1img, alt: 'Tech Solutions Brand Logo', 
-        title: "ReWORX improved our \ncompany's productivity.",
-        subtitle:'Tech Solutions Inc.'},
-        { img: Card2img, alt: 'Tech Solutions Brand Logo', title: "ReWORX improved our \ncompany's productivity.", },
-        { img: Card3img, alt: 'Tech Solutions Brand Logo', title: "ReWORX improved our \ncompany's productivity.", },
-        { img: Card4img, alt: 'Tech Solutions Brand Logo', title: "ReWORX improved our \ncompany's productivity.", },
+        {
+            img: Card1img, alt: 'BillionGrafix Brand Logo',
+            title: "ReWORX improved our \ncompany's productivity.",
+            subtitle: 'BillionGrafix Inc.'
+        },
+        {
+            img: Card2img, alt: 'cryptoblocks Brand Logo',
+            title: "Our markup increased by 200% thanks to ReWORX.",
+            subtitle: 'cryptoblocks Inc.'
+        },
+        {
+            img: Card3img, alt: 'Web Binge Brand Logo',
+            title: "Without ReWORX, our company would've gone downhill.",
+            subtitle: 'Web Binge (WB) Inc.'
+        },
+        {
+            img: Card4img, alt: 'Lightning Virto Brand Logo',
+            title: "Our company has been finishing deadlines early with outsourcing to ReWORX.",
+            subtitle: 'Lightning Virto Inc.'
+        },
     ];
 
     return (
-        <div className="section-2-children section-2a">
+        <div id="Section2a" className="section-2-children section-2a">
             <ThemeProvider theme={customTheme}>
                 <Box className={classes.root}>
-                    <Typography variant="title">
+                    <Typography variant="title" sx={{mb:2}}>
                         Why outsource with us?
                     </Typography>
-                    <Typography variant="body1">
+                    <Typography variant="body4">
                         Here at ReWORX, we provide solutions to your problems.<br />
                         Whether it's additional workforce or virtual assistance,<br />
                         you can be assured that ReWORX will deliver the best service.
                     </Typography>
+    
+                    <Typography variant="body3" sx={{mt:3, mb:1}}>
+                        Are you a freelancer looking for a job?
+                    </Typography>
+                    <Button href="#Section2b" variant="contained" sx={{borderRadius:20, mb:3}}>Click Here</Button>
+
                     <Box className={classes.clientContainer}>
-                        <Typography variant="subtitle1">
-                            Clients
+                        <Typography variant="subtitle1" sx={{ display: 'flex', gap: 10 }}>
+                            <img src={ClientDecor} alt="Client Text Decoration" />
+                            <span>Clients</span>
+                            <img src={ClientDecor} alt="Client Text Decoration" />
                         </Typography>
-                        <Grid container spacing={2}>
+
+                        <Grid container
+                            justifyContent="space-around"
+                            alignItems="center"
+                            spacing={5}>
                             {cardContent.map((card) => {
                                 return (
-
-                                    <Grid item xs={12} md={6} >
+                                    <Grid item xs={12} md={6}>
                                         <Card className={classes.cardGrid}>
-                                                <CardMedia
-                                                className={classes.cardImg}
+                                            <CardMedia
+                                                sx={{ flexShrink: 0, width: 150, height: 150 }}
                                                 image={card.img}
                                                 alt={card.alt} />
+                                            <Box display="flex"
+                                                flexDirection="column"
+                                                flexShrink="1">
                                                 <CardContent>
-                                                    <Typography variant="h6" color="info.dark">
+                                                    <Typography variant="body3" fontWeight="600" color="info.dark">
                                                         "{card.title}"
                                                     </Typography>
                                                 </CardContent>
                                                 <Divider />
                                                 <CardContent>
-                                                    <Typography className={classes.subtitle} color="info.dark">
+                                                    <Typography variant="body3" fontWeight="400" className={classes.subtitle} color="info.dark">
                                                         - {card.subtitle}
                                                     </Typography>
                                                 </CardContent>
+                                            </Box>
                                         </Card>
                                     </Grid>
-
                                 )
                             })}
                         </Grid>

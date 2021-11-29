@@ -3,15 +3,12 @@ import customTheme from './Theme';
 import ScrollSpy from 'react-scrollspy-navigation';
 import React from 'react';
 import DrawerComponent from './DrawerComponent';
-import useWindowDimensions from './WindowDimensions';
 import brandLogo from '../images/ReWORX-BrandLogo.png'
 
 
 
 function Header() {
     // eslint-disable-next-line
-    let {height, width} = useWindowDimensions();
-    let h10 = height/10;
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     return (
@@ -25,7 +22,7 @@ function Header() {
                         ? <DrawerComponent />
                         :
                         <Box>
-                            <ScrollSpy offsetTop={h10}>
+                            <ScrollSpy>
                                 <Link variant="link" className="link" color="info.light" href="#Home" ref={React.createRef()} underline="none">Home</Link>
                                 <Link variant="link" className="link" color="info.light" href="#Services" ref={React.createRef()} underline="none">Services</Link>
                                 <Link variant="link" className="link" color="info.light" href="#AboutUs" ref={React.createRef()} underline="none">About Us</Link>
