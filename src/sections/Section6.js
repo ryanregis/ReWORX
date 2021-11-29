@@ -1,15 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Grid } from '@mui/material';
-import { Box } from '@mui/system';
-import { Button } from '@mui/material';
-import { FormControl, Input, InputLabel,TextareaAutosize, FormHelperText } from '@mui/material';
-import { ThemeProvider } from '@emotion/react';
+import { FormControl, Input, InputLabel, FormHelperText,ThemeProvider,Typography,Link, Button,Grid ,Box } from '@mui/material';
 import customTheme from './components/Theme';
-import { Typography } from '@mui/material';
-import { Link } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 
-const styles = {
+const useStyles = makeStyles(()=>({
     body: {
         padding: '3% 5%',
         backgroundColor: 'white',
@@ -25,36 +20,37 @@ const styles = {
         padding: '2%',
     },
     inputstyles: {
-        backgroundColor: 'white', 
-        width:'100%', 
-        height:'1vh', 
+        backgroundColor: '#FFFEFF', 
+         
         borderRadius: '5px', 
-        padding: '6%',
+        padding: '0.5rem',
         fontWeight: '100',
+        fontSize: '1rem'
     },  
     labelstyles: {
         color: 'black',  
-        fontWeight: '200',
+        fontWeight: '100',
         fontSize: '100%',
     },
-    buttonstyles: {
-        fontSize: '100%',
-        backgroundColor: 'lightgreen',
-        color: 'black',
-        margin: '2%',
-    },
+    textfieldstyles: {
+        backgroundColor:'#FFFEFF !important', 
+        color:'#363636 !important',
+        fontSize: '0.75rem !important',
+        fontWeight:'100 !important',
+        borderRadius: '5px', 
+    }
+}));
 
-}
-
-
+let productData = localStorage.getItem('contact' ) ? JSON.parse(localStorage.getItem('contact')) : [];
 function Section6() {
+    const styles = useStyles();
     const fNameRef = useRef(null);
     const lNameRef = useRef(null);
     const emailRef = useRef(null);
     const messageRef = useRef(null);
     const cNameRef = useRef(null);
     const [id, setID] = useState(Date.now);
-    const [allContacts, setallContacts] = useState([]);
+    const [allContacts, setallContacts] = useState(productData);
 
     const handleSubmit = (e) => {
 
@@ -82,69 +78,69 @@ function Section6() {
     return (
         <div id="ContactUs" className="section section-6">
             <ThemeProvider theme={customTheme}>
-                <Grid container spacing={2} align="center"  style ={styles.body} >
+                <Grid container spacing={2} align="center"  className ={styles.body} >
                     <Grid item xs={12} md={6} >
-                        <div  style ={styles.formstyles} ><br/>
-                        <Typography color="info.light" style={{textShadow: '0px 0px 10px #363636, 0px 0px 10px #363636, 0px 0px 10px #363636'}} variant="h3">Contact Us</Typography>
+                        <div   className ={styles.formstyles} ><br/>
+                        <Typography color="info.light"  sx={{textShadow: '0px 0px 10px #363636, 0px 0px 10px #363636, 0px 0px 10px #363636'}} variant="h3">Contact Us</Typography>
                             <form id="form" onSubmit={handleSubmit}> 
                                 
                                 <Box   sx={{display: 'grid',  gridTemplateColumns: { sm: '1fr 1fr' ,xs: '1fr'}}}>
                                     <div>
                                         <FormControl sx={{margin:'3%'}}>
-                                            <InputLabel  htmlFor="fName" style={styles.labelstyles}>First Name</InputLabel>
-                                            <Input type="text" inputRef={fNameRef} id="fName" name="fName"  style={styles.inputstyles} required/>
+                                            <InputLabel  htmlFor="fName"  className={styles.labelstyles}>First Name</InputLabel>
+                                            <Input type="text" inputRef={fNameRef} id="fName" name="fName"   className={styles.inputstyles} required/>
                                         </FormControl>
                                     </div>
                                     
                                     <div>
                                         <FormControl sx={{margin:'3%'}}>
-                                            <InputLabel  htmlFor="lName" style={styles.labelstyles}>Last Name</InputLabel>
-                                            <Input  inputRef={lNameRef} id="lName"  name="lName" type="text" style={styles.inputstyles} required/>
+                                            <InputLabel  htmlFor="lName"  className={styles.labelstyles}>Last Name</InputLabel>
+                                            <Input  inputRef={lNameRef} id="lName"  name="lName" type="text"  className={styles.inputstyles} required/>
                                         </FormControl>
                                     </div>
 
                                     <div>
                                         <FormControl sx={{margin:'3%'}}>
-                                            <InputLabel htmlFor="cName" style={styles.labelstyles}>Company Name</InputLabel>
-                                            <Input inputRef={cNameRef}  name="cName" type="text" id="cName" style={styles.inputstyles} />
+                                            <InputLabel htmlFor="cName"  className={styles.labelstyles}>Company Name</InputLabel>
+                                            <Input inputRef={cNameRef}  name="cName" type="text" id="cName"  className={styles.inputstyles} />
                                             <FormHelperText>*Optional Only</FormHelperText>
                                         </FormControl>
                                     </div>
 
                                     <div>
                                         <FormControl sx={{margin:'3%'}}>
-                                            <InputLabel htmlFor="email" style={styles.labelstyles}>Email address</InputLabel>
-                                            <Input inputRef={emailRef} id="email" name="email" type="email" style={styles.inputstyles} required/>
+                                            <InputLabel htmlFor="email"  className={styles.labelstyles}>Email address</InputLabel>
+                                            <Input inputRef={emailRef} id="email" name="email" type="email"  className={styles.inputstyles} required/>
                                         </FormControl>
                                     </div>
 
                                 </Box>
                                     <div>
-                                        <FormControl sx={{margin:'3%'}}>
-                                            <TextareaAutosize  ref={messageRef} id="message"  name="message" style={{ fontSize: '1rem', width:'100%', height:'10vh'}} placeholder="Message Us" required/>
-                                        </FormControl>
+                                    <FormControl sx={{width:'35vw'}}>
+                                        <InputLabel className={styles.labelstyles} htmlFor="message">Send Your Message</InputLabel>
+                                        <Input  inputRef={messageRef} id="message"  name="message" type="text"  className={styles.inputstyles} multiline minRows='2' maxRows='4'   required/>
+                                    </FormControl>
                                     </div>
 
                                     <div >
-                                        <Button sx={styles.buttonstyles} type="submit">Submit</Button>
+                                        <Button sx={{m:4}} variant='contained' color='info'  type="submit">Submit</Button>
+                                        <Button sx={{m:4}} variant='contained' color='error'  type="reset">Reset</Button>
                                     </div>
                                     
-                                    <div >
-                                        <Button sx={styles.buttonstyles} type="reset">Reset</Button>
-                                    </div>
+
                             </form>
                         </div> 
                     </Grid>
 
                     <Grid item xs={12} md={6} >
                         
-                        <div  style ={styles.reachstyles} >
-                            <Typography color="primary"  style={{textShadow: '0px 0px 10px #9FDC7F, 0px 0px 10px #9FDC7F, 0px 0px 10px #9FDC7F'}} variant="h3">Reach Us</Typography>
-                            <Typography variant="h6">Contact Number: <br/>+639-xxxx-xxxx</Typography>
-                            <Typography variant="h6" >Email: <br/><Link href="#">contact@reworx.com</Link></Typography>
+                        <div  className ={styles.reachstyles} >
+                            <Typography color="primary"  variant="h3">Reach Us</Typography>
+                            <Typography variant="h6">Contact Number: +639-xxxx-xxxx</Typography>
+                            <Typography variant="h6" >Email: <Link href="#">contact@reworx.com</Link></Typography>
                             <Typography variant="h6">Visit our Office:</Typography>
-                            {/* <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7722.346359775843!2d120.97001912239107!3d14.589205742170764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca3d1375e1fb%3A0x49ebfa658c0ba08!2sIntramuros%2C%20Manila%2C%201002%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1637990544085!5m2!1sen!2sph" width="100%" height="250px" style={{border:"0"}}  loading="lazy" title="maps"></iframe>
-                                     */}
+                            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7722.346359775843!2d120.97001912239107!3d14.589205742170764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca3d1375e1fb%3A0x49ebfa658c0ba08!2sIntramuros%2C%20Manila%2C%201002%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1637990544085!5m2!1sen!2sph" width="100%" height="250px" style={{border:"0"}}  loading="lazy" title="maps"></iframe>
+                                    
                         </div> 
                     </Grid>
 

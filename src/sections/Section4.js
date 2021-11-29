@@ -37,7 +37,7 @@ const Section4 = () => {
     <ThemeProvider theme={customTheme}>
         <Grid container align="center" p={2} >
             <Grid item xs={12} md={6} order={{xs:2,md:1}}>
-                <Card sx={{ maxWidth: 400}} style={styles.cardMod}>
+                <Card sx={{width: 'clamp(300px, 30vw, 500px)'}} style={styles.cardMod}>
                     <CardActionArea>
                       <Box sx={{ position: 'relative' }}>
                           <CardMedia component="img" height='230' image={require('./images/section4-virtualassistance.jpeg').default} styles={styles.media} alt="virtualassistance"/>
@@ -50,7 +50,7 @@ const Section4 = () => {
                 </Card>
             </Grid>
             <Grid item xs={12} md={6} order={{xs:3,md:2}}>
-                <Card sx={{ maxWidth: 400 }} style={styles.cardMod}>
+                <Card sx={{width: 'clamp(300px, 30vw, 500px)'}} style={styles.cardMod}>
                 <CardActionArea>
                   <Box sx={{ position: 'relative' }}>
                     <CardMedia component="img" height='230' image={require('./images/section4-dataprocessing.jpeg').default} styles={styles.media} alt="dataprocessing"/>
@@ -66,7 +66,7 @@ const Section4 = () => {
                   <Typography  color="info.light" style={{textShadow: '0px 0px 10px #363636, 0px 0px 10px #363636, 0px 0px 10px #363636'}} variant="h3">Services</Typography>
             </Grid>
             <Grid item xs={12} md={6} order={{xs:4,md:4}}>
-                <Card sx={{ maxWidth: 400 }} style={styles.cardMod}>
+                <Card sx={{width: 'clamp(300px, 30vw, 500px)'}} style={styles.cardMod}>
                 <CardActionArea>
                   <Box sx={{ position: 'relative' }}>
                     <CardMedia component="img" height='230' image={require('./images/section4-crypto.jpeg').default} styles={styles.media} alt="crpto"/>
@@ -79,7 +79,7 @@ const Section4 = () => {
                 </Card>
             </Grid>
             <Grid item xs={12} md={6}  order={{xs:5,md:5}}>
-                <Card sx={{ maxWidth: 400 }} style={styles.cardMod}>
+                <Card sx={{width: 'clamp(300px, 30vw, 500px)'}} style={styles.cardMod}>
                 <CardActionArea>
                   <Box sx={{ position: 'relative' }}>
                     <CardMedia component="img" height='230' image={require('./images/section4-webdev.jpeg').default} styles={styles.media} alt="webdev"/>
