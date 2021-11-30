@@ -54,7 +54,7 @@ function Section5() {
                                 <Box sx={{ width: '100%', flexShrink: 0, display: 'grid', gridTemplateColumns: { sm: '1fr 1fr ', xs: '1fr' } }}>
                                     <CardMedia
                                         sx={{ height: 400, backgroundPosition: 'center', backgroundSize: 'contain' }}
-                                        image={require('./images/section4-virtualassistance.jpeg').default}
+                                        image={require('./images/ryanpic.JPG').default}
                                         alt="ReWORX Founder Ryan Gerome Regis's Picture" />
                                     <Box p={3} display='flex'
                                         flexDirection='column' justifyContent='center' alignItems='center'>
