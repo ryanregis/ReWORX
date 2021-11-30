@@ -51,7 +51,7 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-let productData = localStorage.getItem('contact') ? JSON.parse(localStorage.getItem('contact')) : [];
+let contactData = localStorage.getItem('contact') ? JSON.parse(localStorage.getItem('contact')) : [];
 function Section6() {
     const styles = useStyles();
     const fNameRef = useRef(null);
@@ -60,27 +60,43 @@ function Section6() {
     const messageRef = useRef(null);
     const cNameRef = useRef(null);
     const [id, setID] = useState(Date.now);
-    const [allContacts, setallContacts] = useState(productData);
+    const [allContacts, setallContacts] = useState(contactData);
 
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        const formData = {
-            id: id,
-            fName: fNameRef.current.value,
-            lName: lNameRef.current.value,
-            email: emailRef.current.value,
-            message: messageRef.current.value,
-            cName: cNameRef.current.value,
-        };
-        //all data in object formData will be stored in allcontacts array spread
-        setallContacts([...allContacts, formData])
-        alert('Your Form Have Been Submitted');
-        fNameRef.current.value = null;
-        lNameRef.current.value = null;
-        emailRef.current.value = null;
-        messageRef.current.value = null;
-        setID(Date.now);
+        const patternName = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/
+        let fNameTest = fNameRef.current.value;
+        let lNameTest = lNameRef.current.value;
+        if (!patternName.test(fNameTest)) {
+            alert ('Please Enter a Valid Name Input in Alphabet Characters Only');
+            return false;
+        }
+        else if ((!patternName.test(lNameTest))) {
+            alert ('Please Enter a Valid Name Input in Alphabet Characters Only');
+            return false;
+        }
+        else  {
+            const formData = {
+                id: id,
+                fName: fNameRef.current.value,
+                lName: lNameRef.current.value,
+                email: emailRef.current.value,
+                message: messageRef.current.value,
+                cName: cNameRef.current.value,
+            };
+    
+            
+            //all data in object formData will be stored in allcontacts array spread
+            setallContacts([...allContacts, formData])
+            alert('Your Form Have Been Submitted');
+            fNameRef.current.value = null;
+            lNameRef.current.value = null;
+            emailRef.current.value = null;
+            messageRef.current.value = null;
+            setID(Date.now);
+        }
+
     };
     useEffect(() => { localStorage.setItem("contact", JSON.stringify(allContacts)) }, [allContacts]);
 
