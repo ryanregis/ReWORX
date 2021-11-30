@@ -1,13 +1,10 @@
-import React from 'react'
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
+import React from 'react';
 import { Box } from '@mui/system';
-import { Typography } from '@mui/material';
-import { Grid } from '@mui/material';
-import { CardActionArea } from '@mui/material';
+import { CardActionArea, Grid, Typography, CardMedia, Card  } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import customTheme from './components/Theme';
-//lightgreen background, two divs, two layered
+
+
 const styles = {
   cardMod: {
     borderRadius: '20px',
@@ -38,7 +35,9 @@ const Section4 = () => {
         <Box sx={{ position: 'relative', minHeight: '90vh', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Box sx={{ zIndex: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '57.5%', background: 'linear-gradient(to right, #178260 15%, transparent 100%)' }}></Box>
           <Box sx={{ zIndex: 0, position: 'absolute', bottom: 0, right: 0, width: '100%', height: '57.5%', background: 'linear-gradient(to left, #178260 15%, transparent 100%)' }}></Box>
+          
           <Grid container align="center" p={2} sx={{ zIndex: 1 }}>
+
             <Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
               <Card sx={{ width: 'clamp(300px, 30vw, 500px)' }} style={styles.cardMod}>
                 <CardActionArea>
@@ -52,6 +51,7 @@ const Section4 = () => {
                 </CardActionArea>
               </Card>
             </Grid>
+
             <Grid item xs={12} md={6} order={{ xs: 3, md: 2 }}>
               <Card sx={{ width: 'clamp(300px, 30vw, 500px)' }} style={styles.cardMod}>
                 <CardActionArea>
@@ -65,6 +65,7 @@ const Section4 = () => {
                 </CardActionArea>
               </Card>
             </Grid>
+
             <Grid item xs={12} md={12} order={{ xs: 1, md: 3 }}>
               <Typography color="info.light"
                 sx={{
@@ -75,6 +76,7 @@ const Section4 = () => {
                 Services
               </Typography>
             </Grid>
+
             <Grid item xs={12} md={6} order={{ xs: 4, md: 4 }}>
               <Card sx={{ width: 'clamp(300px, 30vw, 500px)' }} style={styles.cardMod}>
                 <CardActionArea>
@@ -88,6 +90,7 @@ const Section4 = () => {
                 </CardActionArea>
               </Card>
             </Grid>
+
             <Grid item xs={12} md={6} order={{ xs: 5, md: 5 }}>
               <Card sx={{ width: 'clamp(300px, 30vw, 500px)' }} style={styles.cardMod}>
                 <CardActionArea>
@@ -101,6 +104,7 @@ const Section4 = () => {
                 </CardActionArea>
               </Card>
             </Grid>
+            
           </Grid>
         </Box>
       </ThemeProvider>
