@@ -68,10 +68,15 @@ function Section6() {
         const patternName = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/
         let fNameTest = fNameRef.current.value;
         let lNameTest = lNameRef.current.value;
-        if (!patternName.test(fNameTest && lNameTest)) {
+        if (!patternName.test(fNameTest)) {
             alert ('Please Enter a Valid Name Input in Alphabet Characters Only');
             return false;
-        } else {
+        }
+        else if ((!patternName.test(lNameTest))) {
+            alert ('Please Enter a Valid Name Input in Alphabet Characters Only');
+            return false;
+        }
+        else  {
             const formData = {
                 id: id,
                 fName: fNameRef.current.value,
