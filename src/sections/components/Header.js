@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, useMediaQuery, useTheme, Link, ThemeProvider, Box } from '@mui/material';
+import { AppBar, Toolbar, useMediaQuery, useTheme, Link, ThemeProvider, Box, Button } from '@mui/material';
 import customTheme from './Theme';
 import ScrollSpy from 'react-scrollspy-navigation';
 import React from 'react';
@@ -13,10 +13,13 @@ function Header() {
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <ThemeProvider theme={customTheme}>
-            <AppBar position="sticky">
+            <AppBar position="fixed">
                 {/* <CssBaseline /> */}
                 <Toolbar className="header">
-                    <img src={brandLogo} alt="ReWORX Brand Logo" className="header-logo"/>
+                    <Button href="#Home">
+                        <img src={brandLogo} alt="ReWORX Brand Logo" className="header-logo"/>
+                    </Button>
+                    
                     
                     {isMobile
                         ? <DrawerComponent />

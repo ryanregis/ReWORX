@@ -81,7 +81,7 @@
     /* border: 2px solid white; */
     width: 100%;
     min-height: 100vh;
-    padding: 10vh 0 1.5vw 1.5vw;
+    padding: 5vh 7.5vw;
     background: url(./sections/images/section1-bgimg.jpg);
     background-size: cover;
     background-position: center;
@@ -117,15 +117,22 @@
     background-size: cover;
     background-position: center;
 }
+.section-4{
+    padding: 10vh 0 0 0;
+}
 
 .section-5 {
     background: radial-gradient(78.03% 83.84% at 50% 50%, #FFFEFF 0%, #9BD97E 100%);
 }
 
 .section-6 {
-    background: #FFFEFF;
+    background: #363636;
 }
 
 .active {
     color: #9FDC7F !important;
+}
+
+.text-shadow{
+    text-shadow: 0px 4px 4px rgba(36,36,36,0.25), 0px 0px 10px #FFFEFF, 0px 0px 10px #FFFEFF, 0px 0px 10px #FFFEFF;
 }

@@ -67,7 +67,7 @@ function Section2a() {
         },
         {
             img: Card4img, alt: 'Lightning Virto Brand Logo',
-            title: "Our company has been finishing deadlines early with outsourcing to ReWORX.",
+            title: "Our company has been finishing deadlines early by outsourcing to ReWORX.",
             subtitle: 'Lightning Virto Inc.'
         },
     ];
