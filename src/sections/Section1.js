@@ -23,8 +23,9 @@ const useStyles = makeStyles(() => ({
 
     button:{
         position: 'absolute',
-        bottom: '7.5%',
+        bottom: '5%',
         width: '100%',
+        marginTop: 5,
         display: 'flex',
         justifyContent: 'center',
     }
