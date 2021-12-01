@@ -25,18 +25,18 @@ function Section5() {
                                 What is ReWORX?
                             </Typography>
                         </AccordionSummary>
-                        <AccordionDetails sx={{maxHeight: 'clamp(350px, 60vmin, 750px)', backgroundColor: 'info.light', overflowY: 'scroll' }}>
-                            <img src={BrandName} alt="ReWORX" style={{width: 'clamp(250px,70%, 500px)', backgroundColor: '#363636', borderRadius: 20, paddingLeft: '2%' }} />
+                        <AccordionDetails sx={{ maxHeight: 'clamp(350px, 60vmin, 750px)', backgroundColor: 'info.light', overflowY: 'scroll' }}>
+                            <img src={BrandName} alt="ReWORX" style={{ width: 'clamp(250px,70%, 500px)', backgroundColor: '#363636', borderRadius: 20, paddingLeft: '2%' }} />
                             <Divider sx={{ margin: 2 }} />
-                                <Typography color='info.dark' variant='body7'>
-                                    ReWORX is an online outsourcing company that provides oppurtunity to all independent freelancers<br />looking for jobs or sidejobs,
-                                    companies looking for manpower, or just individuals looking for specific services.<br /><br /> ReWORX offers an easy to navigate platform
-                                    for freelancers and customers alike to maximize the coordination between the two entities.
-                                </Typography>
+                            <Typography color='info.dark' variant='body7'>
+                                ReWORX is an online outsourcing company that provides oppurtunity to all independent freelancers<br />looking for jobs or sidejobs,
+                                companies looking for manpower, or just individuals looking for specific services.<br /><br /> ReWORX offers an easy to navigate platform
+                                for freelancers and customers alike to maximize the coordination between the two entities.
+                            </Typography>
                             <Divider sx={{ margin: 2 }} />
-                                <Typography color="error" variant="h6">
-                                    ReWORX is a mock outsourcing company created as the first group project for KodeGo Web Development Bootcamp Batch 3: Exceeds.
-                                </Typography>
+                            <Typography color="error" variant="h6">
+                                ReWORX is a mock outsourcing company created as the first group project for KodeGo Web Development Bootcamp Batch 3: Exceeds.
+                            </Typography>
                         </AccordionDetails>
                     </Accordion>
 
@@ -46,7 +46,7 @@ function Section5() {
                                 The Founder of ReWORX
                             </Typography>
                         </AccordionSummary>
-                        <AccordionDetails sx={{maxHeight: 'clamp(350px, 60vmin, 750px)', backgroundColor: 'info.light', overflowY: 'scroll' }}>
+                        <AccordionDetails sx={{ maxHeight: 'clamp(350px, 60vmin, 750px)', backgroundColor: 'info.light', overflowY: 'scroll' }}>
 
                             <CardActionArea>
                                 <Box sx={{ width: '100%', flexShrink: 0, display: 'grid', gridTemplateColumns: { sm: '1fr 1fr ', xs: '1fr' } }}>
@@ -68,7 +68,7 @@ function Section5() {
                                         </Typography><br />
                                         <Typography color='error' variant='link' m={1}> Check out his Portfolio and Resume below.
                                         </Typography>
-                                        <Button variant="contained" href="#" target="_blank" >
+                                        <Button variant="contained" href="https://ryanregis.github.io/ePortfolio" target="_blank" >
                                             VIEW PROFILE
                                         </Button>
                                     </Box>
@@ -84,12 +84,12 @@ function Section5() {
                                 The Co-Founders of ReWORX
                             </Typography>
                         </AccordionSummary>
-                        <AccordionDetails sx={{maxHeight: 'clamp(350px, 60vmin, 750px)', padding: 0, backgroundColor: 'info.light', display: 'grid', overflowY: 'scroll', gridTemplateColumns: { sm: '1fr 1fr ', xs: '1fr' } }}>
+                        <AccordionDetails sx={{ maxHeight: 'clamp(350px, 60vmin, 750px)', padding: 0, backgroundColor: 'info.light', display: 'grid', overflowY: 'scroll', gridTemplateColumns: { sm: '1fr 1fr ', xs: '1fr' } }}>
                             <CardActionArea sx={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
                                 <Box sx={{ margin: '1%', }}>
                                     <CardMedia
                                         sx={{ height: 300, backgroundPosition: 'center', backgroundSize: 'contain' }}
-                                        image={require('./images/ronpic.jpg').default} 
+                                        image={require('./images/ronpic.jpg').default}
                                         alt="ReWORX Co-Founder Ron Velarde's Picture" />
                                     <Box p={3} display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
                                         <Typography color='info.dark' variant='h6'>
@@ -112,9 +112,9 @@ function Section5() {
 
                             <CardActionArea sx={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
                                 <Box sx={{ margin: '1%' }}>
-                                    <CardMedia 
-                                        sx={{ height: 300, backgroundPosition: 'center', backgroundSize: 'contain' }} 
-                                        image={require('./images/ralphpic.jpg').default} 
+                                    <CardMedia
+                                        sx={{ height: 300, backgroundPosition: 'center', backgroundSize: 'contain' }}
+                                        image={require('./images/ralphpic.jpg').default}
                                         alt="ReWORX Co-Founder Ralph Santolorin's Picture" />
                                     <Box p={3} display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
                                         <Typography color='info.dark' variant='h6'>
@@ -127,7 +127,7 @@ function Section5() {
                                         </Typography><br />
                                         <Typography color='error' variant='link' m={1}> Check out his Portfolio and Resume below.
                                         </Typography>
-                                        <Button variant="contained" href="#">
+                                        <Button variant="contained" href="https://ralphfromthesky.github.io/eport/">
                                             VIEW PROFILE
                                         </Button>
                                     </Box>
@@ -135,7 +135,7 @@ function Section5() {
                             </CardActionArea>
                         </AccordionDetails>
                     </Accordion>
-                    
+
                 </Box>
             </ThemeProvider>
         </div>
