@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ReWORX/static/css/main.4582adaa.chunk.css",
-    "main.js": "/ReWORX/static/js/main.da15995d.chunk.js",
-    "main.js.map": "/ReWORX/static/js/main.da15995d.chunk.js.map",
+    "main.js": "/ReWORX/static/js/main.19094e96.chunk.js",
+    "main.js.map": "/ReWORX/static/js/main.19094e96.chunk.js.map",
     "runtime-main.js": "/ReWORX/static/js/runtime-main.5001ab97.js",
     "runtime-main.js.map": "/ReWORX/static/js/runtime-main.5001ab97.js.map",
     "static/js/2.60e26194.chunk.js": "/ReWORX/static/js/2.60e26194.chunk.js",
@@ -39,6 +39,6 @@
     "static/js/runtime-main.5001ab97.js",
     "static/js/2.60e26194.chunk.js",
     "static/css/main.4582adaa.chunk.css",
-    "static/js/main.da15995d.chunk.js"
+    "static/js/main.19094e96.chunk.js"
   ]
 }
